@@ -12,7 +12,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
+
 
 package com.example.ar;
 
@@ -57,11 +59,14 @@ import java.util.ArrayList;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+*/
 /**
  * This is a simple example that shows how to create an augmented reality (AR) application using the
  * ARCore API. The application will display any detected planes and will allow the user to tap on a
  * plane to place a 3d model of the Android robot.
- */
+ *//*
+
+
 public class ArActivity extends AppCompatActivity implements GLSurfaceView.Renderer {
     private static final String TAG = ArActivity.class.getSimpleName();
 
@@ -105,10 +110,14 @@ public class ArActivity extends AppCompatActivity implements GLSurfaceView.Rende
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         surfaceView = findViewById(R.id.surfaceview);
-        displayRotationHelper = new DisplayRotationHelper(/*context=*/ this);
+        displayRotationHelper = new DisplayRotationHelper(*/
+/*context=*//*
+ this);
 
         // Set up tap listener.
-        tapHelper = new TapHelper(/*context=*/ this);
+        tapHelper = new TapHelper(*/
+/*context=*//*
+ this);
         surfaceView.setOnTouchListener(tapHelper);
 
         // Set up renderer.
@@ -146,7 +155,9 @@ public class ArActivity extends AppCompatActivity implements GLSurfaceView.Rende
                 }
 
                 // Create the session.
-                session = new Session(/* context= */ this);
+                session = new Session(*/
+/* context= *//*
+ this);
 
             } catch (UnavailableArcoreNotInstalledException
                     | UnavailableUserDeclinedInstallationException e) {
@@ -228,15 +239,25 @@ public class ArActivity extends AppCompatActivity implements GLSurfaceView.Rende
         // Prepare the rendering objects. This involves reading shaders, so may throw an IOException.
         try {
             // Create the texture and pass it to ARCore session to be filled during update().
-            backgroundRenderer.createOnGlThread(/*context=*/ this);
-            planeRenderer.createOnGlThread(/*context=*/ this, "models/trigrid.png");
-            pointCloudRenderer.createOnGlThread(/*context=*/ this);
+            backgroundRenderer.createOnGlThread(*/
+/*context=*//*
+ this);
+            planeRenderer.createOnGlThread(*/
+/*context=*//*
+ this, "models/trigrid.png");
+            pointCloudRenderer.createOnGlThread(*/
+/*context=*//*
+ this);
 
-            virtualObject.createOnGlThread(/*context=*/ this, "models/andy.obj", "models/andy.png");
+            virtualObject.createOnGlThread(*/
+/*context=*//*
+ this, "models/andy.obj", "models/andy.png");
             virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
 
             virtualObjectShadow.createOnGlThread(
-                    /*context=*/ this, "models/andy_shadow.obj", "models/andy_shadow.png");
+                    */
+/*context=*//*
+ this, "models/andy_shadow.obj", "models/andy_shadow.png");
             virtualObjectShadow.setBlendMode(BlendMode.Shadow);
             virtualObjectShadow.setMaterialProperties(1.0f, 0.0f, 0.0f, 1.0f);
 
@@ -389,7 +410,9 @@ public class ArActivity extends AppCompatActivity implements GLSurfaceView.Rende
         }
     }
 
-    /** Checks if we detected at least one plane. */
+    */
+/** Checks if we detected at least one plane. *//*
+
     private boolean hasTrackingPlane() {
         for (Plane plane : session.getAllTrackables(Plane.class)) {
             if (plane.getTrackingState() == TrackingState.TRACKING) {
@@ -399,3 +422,4 @@ public class ArActivity extends AppCompatActivity implements GLSurfaceView.Rende
         return false;
     }
 }
+*/

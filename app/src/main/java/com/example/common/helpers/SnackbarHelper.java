@@ -70,7 +70,7 @@ public final class SnackbarHelper {
         new Runnable() {
           @Override
           public void run() {
-            messageSnackbarToHide.dismiss();
+            //messageSnackbarToHide.dismiss();
           }
         });
   }
