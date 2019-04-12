@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 public class MobileArrayAdapter extends ArrayAdapter<String> {
@@ -32,11 +33,12 @@ public class MobileArrayAdapter extends ArrayAdapter<String> {
 
         System.out.println(s);
 
-        if (s.equals("pic1")) {
-            imageView.setImageResource(R.drawable.pic1);
-        } else {
-            imageView.setImageResource(R.drawable.pic2);
-        }
+        Context context = imageView.getContext();
+        ///imageView.setAdjustViewBounds(true);
+        int id = context.getResources().getIdentifier(s, "drawable", context.getPackageName());
+        imageView.setImageResource(id);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        rowView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
         return rowView;
     }
