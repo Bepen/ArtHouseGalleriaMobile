@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment {
 
         ListView listView = (ListView)view.findViewById(R.id.homeList);
         listView.setAdapter(new MobileArrayAdapter(getActivity(), images));
-        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0){
@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
                     startActivity(myIntent);
                 }
             }
-        });*/
+        });
 
 
         return view;

@@ -23,9 +23,9 @@ public class MobileArrayAdapter extends ArrayAdapter<String> {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View rowView = inflater.inflate(R.layout.list_mobile, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.label);
+
         ImageView imageView = (ImageView) rowView.findViewById(R.id.logo);
-        textView.setText(values[position]);
+
 
         // Change icon based on name
         String s = values[position];
