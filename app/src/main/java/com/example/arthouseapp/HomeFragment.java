@@ -12,23 +12,23 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class HomeFragment extends Fragment {
+
+    static final String[] images =
+            new String[] {"pic1", "pic2"};
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //just change the fragment_dashboard
-        //with the fragment you want to inflate
-        //like if the class is HomeFragment it should have R.layout.home_fragment
-        //if it is DashboardFragment it should have R.layout.fragment_dashboard
+
+
 
         View view = inflater.inflate(R.layout.fragment_home, null);
 
-        String[] homeItems = {"Test1", "Test2"};
+        //String[] homeItems = {"Test1", "Test2"};
+
         ListView listView = (ListView)view.findViewById(R.id.homeList);
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
-                getActivity(), android.R.layout.simple_list_item_1, homeItems
-        );
-        listView.setAdapter(listViewAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setAdapter(new MobileArrayAdapter(getActivity(), images));
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0){
@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
                     startActivity(myIntent);
                 }
             }
-        });
+        });*/
 
 
         return view;
