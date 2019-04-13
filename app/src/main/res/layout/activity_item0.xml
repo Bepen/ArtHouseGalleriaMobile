@@ -17,28 +17,24 @@
         android:id="@+id/titleOfWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:text="" />
 
     <TextView
         android:id="@+id/authorOfWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:text="" />
 
     <TextView
         android:id="@+id/dateOfWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:text="" />
 
     <TextView
         android:id="@+id/descOfWork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:text="" />
 
 </LinearLayout>
