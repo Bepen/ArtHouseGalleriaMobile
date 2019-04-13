@@ -35,6 +35,12 @@ public class MobileArrayAdapter extends ArrayAdapter<String> {
 
         Context context = imageView.getContext();
         ///imageView.setAdjustViewBounds(true);
+
+        Item0.titleArr = new String[] {"Image One", "Image Two"};
+        Item0.authorArr = new String[] {"Person One", "Person Two"};
+        Item0.dateArr = new String[] {"1/1/1", "2/2/2"};
+        Item0.descArr = new String[] {"Description One", "Description Two"};
+
         int id = context.getResources().getIdentifier(s, "drawable", context.getPackageName());
         imageView.setImageResource(id);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
