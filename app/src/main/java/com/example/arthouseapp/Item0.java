@@ -19,7 +19,6 @@ public class Item0 extends AppCompatActivity {
 
         TextView title = (TextView)findViewById(R.id.titleOfWork);
         title.setText(titleArr[i]);
-
         TextView author = (TextView)findViewById(R.id.authorOfWork);
         author.setText(authorArr[i]);
 

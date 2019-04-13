@@ -10,17 +10,37 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import org.jsoup.*;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     static final String[] images =
             new String[] {"pic1", "pic2"};
 
+    
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
+        String url= "http://arthousegalleria.com";
+        Document doc;
+        try{
+            doc = Jsoup.connect(url).get();
+        }catch (IOException e){
+            e.printStackTrace();
+            doc = null;
+        }
+        if( doc != null) {
+            Elements links = doc.select("a[href]");
+        }
 
         View view = inflater.inflate(R.layout.fragment_home, null);
 
