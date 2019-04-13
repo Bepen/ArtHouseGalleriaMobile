@@ -24,10 +24,10 @@ public class Item0 extends AppCompatActivity {
         author.setText(authorArr[i]);
 
         TextView date = (TextView)findViewById(R.id.dateOfWork);
-        title.setText(dateArr[i]);
+        date.setText(dateArr[i]);
 
         TextView description = (TextView)findViewById(R.id.descOfWork);
-        title.setText(descArr[i]);
+        description.setText(descArr[i]);
 
     }
 }
