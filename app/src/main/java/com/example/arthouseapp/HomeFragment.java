@@ -31,15 +31,11 @@ public class HomeFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0){
-                    Intent myIntent = new Intent(view.getContext(), Item0.class);
-                    startActivity(myIntent);
 
-                }
-                if(i == 1){
-                    Intent myIntent = new Intent(view.getContext(), Item1.class);
-                    startActivity(myIntent);
-                }
+                Item0.i = i;
+                Intent myIntent = new Intent(view.getContext(), Item0.class);
+                startActivity(myIntent);
+
             }
         });
 
