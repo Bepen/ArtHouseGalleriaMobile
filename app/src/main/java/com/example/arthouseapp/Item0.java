@@ -1,8 +1,11 @@
 package com.example.arthouseapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -41,6 +44,15 @@ public class Item0 extends AppCompatActivity {
 
         TextView description = (TextView)findViewById(R.id.descOfWork);
         description.setText(descArr[i]);
+
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), Item1.class);
+                startActivity(myIntent);
+            }
+        });
 
     }
 }
