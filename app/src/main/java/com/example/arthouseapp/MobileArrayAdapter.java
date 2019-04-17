@@ -39,7 +39,7 @@ public class MobileArrayAdapter extends ArrayAdapter<String> {
         Item0.titleArr = new String[] {"Title One", "Person Two"};
         Item0.authorArr = new String[] {"Person One", "Person Two"};
         Item0.dateArr = new String[] {"1-1-1", "2-2-2"};
-        Item0.descArr = new String[] {"Description One", "Description Two"};
+        Item0.descArr = new String[] {"Description One Description One Description One Description One Description One Description One Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One  Description One ", "Description Two"};
         Item0.imageArr = new String[] {"pic1", "pic2"};
 
         int id = context.getResources().getIdentifier(s, "drawable", context.getPackageName());
