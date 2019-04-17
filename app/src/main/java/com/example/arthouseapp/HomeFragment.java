@@ -44,8 +44,6 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, null);
 
-        //String[] homeItems = {"Test1", "Test2"};
-
         ListView listView = (ListView)view.findViewById(R.id.homeList);
         listView.setAdapter(new MobileArrayAdapter(getActivity(), images));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
