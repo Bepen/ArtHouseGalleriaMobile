@@ -56,7 +56,7 @@ public class Login extends AppCompatActivity {
 
     protected boolean tryLogin(String uInput, String pInput){
         for(int i = 0; i < users.length; i++){
-            if(users[i].equals(uInput)){
+            if(users[i].toLowerCase().equals(uInput.toLowerCase())){
                 userIndex = i;
                 if(pInput.equals(passwords[userIndex])){
                     return true;
