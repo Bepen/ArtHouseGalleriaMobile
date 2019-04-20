@@ -45,6 +45,7 @@ public class Login extends AppCompatActivity {
                 else{
                     if(tryLogin(uText.getText().toString(), pText.getText().toString())){
                         ProfileFragment.loggedIn = true;
+                        ProfileFragment.userIndex = userIndex;
                         finish();
                     }else {
                         tryAgain.setText("Try Again");
