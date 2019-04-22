@@ -49,7 +49,7 @@ public class Item0 extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), Item1.class);
+                Intent myIntent = new Intent(view.getContext(), ArActivity.class);
                 startActivity(myIntent);
             }
         });
