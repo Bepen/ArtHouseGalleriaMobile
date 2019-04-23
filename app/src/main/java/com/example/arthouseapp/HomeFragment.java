@@ -34,17 +34,6 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        String url= "http://arthousegalleria.com";
-        Document doc;
-        try{
-            doc = Jsoup.connect(url).get();
-        }catch (IOException e){
-            e.printStackTrace();
-            doc = null;
-        }
-        if( doc != null) {
-            Elements links = doc.select("a[href]");
-        }
 
         View view = inflater.inflate(R.layout.fragment_home, null);
 
