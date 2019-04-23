@@ -3,6 +3,7 @@ package com.example.arthouseapp;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -10,9 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
 import android.transition.Scene;
+
+import android.content.Context;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
@@ -36,7 +40,6 @@ import com.google.ar.sceneform.ux.TransformableNode;
 public class ArActivity extends AppCompatActivity {
     private static final String TAG = ArActivity.class.getSimpleName();
     private static final double MIN_OPENGL_VERSION = 3.0;
-
     private ArFragment arFragment;
     private ModelRenderable andyRenderable;
     private ViewRenderable paintRenderable;
@@ -51,6 +54,10 @@ public class ArActivity extends AppCompatActivity {
         if (!checkIsSupportedDeviceOrFinish(this)) {
             return;
         }
+        Intent in = getIntent();
+        Bundle b = in.getExtras();
+
+
 
         setContentView(R.layout.activity_ar);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.activity_ar);
@@ -61,13 +68,14 @@ public class ArActivity extends AppCompatActivity {
                 .build()
                 .thenAccept(renderable -> paintRenderable = renderable
                 );
-
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
                     if (paintRenderable == null) {
                         return;
                     }
 
+                    ImageView iv = paintRenderable.getView().findViewById(R.id.arImage);
+                    iv.setImageResource(b.getInt("fileId"));
                     // Create the Anchor.
                     Anchor anchor = hitResult.createAnchor();
                     AnchorNode anchorNode = new AnchorNode(anchor);
