@@ -28,34 +28,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
+            android:layout_marginLeft="20dp"
             android:textSize="50dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/authorOfWork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Author" />
 
         <TextView
             android:id="@+id/dateOfWork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Date" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="75dp" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/descOfWork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="Desc" />
 
         <TextView

@@ -48,8 +48,8 @@ public class ProfileFragment extends Fragment {
         numArtwork = (TextView) view.findViewById(R.id.numArtwork);
         numBids = (TextView) view.findViewById(R.id.numBids);
 
-        numArtwork.setText(numOfArtworkOwned[userIndex]+"");
-        numBids.setText(activeBids[userIndex]+"");
+        numArtwork.setText("Artworks Owned: "+numOfArtworkOwned[userIndex]+"");
+        numBids.setText("Active Bids: "+activeBids[userIndex]+"");
 
 
 
