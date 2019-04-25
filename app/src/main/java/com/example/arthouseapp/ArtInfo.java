@@ -35,7 +35,7 @@ public class ArtInfo extends AppCompatActivity {
         author.setText(b.getString("author"));
 
         TextView date = (TextView)findViewById(R.id.dateOfWork);
-        date.setText(b.getString("date"));
+        date.setText("("+b.getString("date")+")");
 
         TextView description = (TextView)findViewById(R.id.descOfWork);
         description.setText(b.getString("desc"));
