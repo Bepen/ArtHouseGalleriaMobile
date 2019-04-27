@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ArtInfo extends AppCompatActivity {
+public class ArtInfo extends AppCompatActivity { //generate info for each painting based on which is seleced
     int id = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

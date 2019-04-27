@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
-public class MobileArrayAdapter extends ArrayAdapter<String> {
+public class ImageListAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] values;
 
-    public MobileArrayAdapter(Context context, String[] values) {
+    public ImageListAdapter(Context context, String[] values) {
         super(context, R.layout.list_mobile, values);
         this.context = context;
         this.values = values;
@@ -34,11 +34,10 @@ public class MobileArrayAdapter extends ArrayAdapter<String> {
         System.out.println(s);
 
         Context context = imageView.getContext();
-        ///imageView.setAdjustViewBounds(true);
 
 
         int id = context.getResources().getIdentifier(s, "drawable", context.getPackageName());
-        imageView.setImageResource(id);
+        imageView.setImageResource(id); //generate feed
 
         return rowView;
     }

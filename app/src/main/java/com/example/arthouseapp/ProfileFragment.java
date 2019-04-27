@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment { //hardcoded profiles just to test it out as a proof of concept
 
     static boolean loggedIn = false;
     static int userIndex = 0;

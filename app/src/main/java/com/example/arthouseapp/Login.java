@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity { //hardcoded login screen for proof of concept and future connection to database
 
     String[] users = {"User1", "User2"};
     String[] passwords = {"Pass1", "Pass2"};
